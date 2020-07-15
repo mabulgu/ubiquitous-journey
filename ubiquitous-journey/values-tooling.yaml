@@ -16,6 +16,38 @@ jenkins_values: &jenkins_values
     - name: argocd-token
       username: token
       password: aaa.bbb.ccc
+  deployment:
+    env_vars:
+    - name: JVM_ARCH
+      value: 'x86_64'
+    - name: DISABLE_ADMINISTRATIVE_MONITORS
+      value: 'false'
+    - name: ENABLE_FATAL_ERROR_LOG_FILE
+      value: 'false'
+    - name: JENKINS_OPTS
+      value: '--sessionTimeout=0'
+    - name: SLACK_BASE_URL
+      value: ''
+    - name: SLACK_ROOM
+      value: ''
+    - name: SLACK_TOKEN_CREDENTIAL_ID
+      value: ''
+    - name: SLACK_TEAM
+      value: ''
+    - name: SHARED_LIB_REPO
+      value: 'https://github.com/mabulgu/openshift-jenkins-shared-libraries.git'
+    - name: SHARED_LIB_NAME
+      value: 'openshift-jenkins-shared-libraries'
+    - name: SHARED_LIB_REF
+      value: ''
+    - name: SHARED_LIB_SECRET
+      value: ''
+    - name: GITLAB_HOST
+      value: ''
+    - name: GITLAB_TOKEN
+      value: ''
+    - name: GITLAB_GROUP_NAME
+      value: rht-labs
 
 ##############
 # 🛎 Pact Broker Custom Values
