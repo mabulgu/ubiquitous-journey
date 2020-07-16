@@ -19,10 +19,10 @@ pet_battle_api: &api_values
   image_namespace: eformat
   image_version: latest
 
-neverending-blog: &neverending_values
+django-scaffold: &django-scaffold_values
   app_tag: latest
 
-neverending-db: &neverending_db_values
+django-scaffold-db: &django-scaffold_db_values
   securityContext:
     runAsUser: 1000590000
     fsGroup: 1000590000
@@ -66,21 +66,21 @@ applications:
   source_ref: master
   values: *api_values
   ignore_differences: *ignore_differences
-- name: neverending-blog
+- name: django-scaffold
   enabled: true
-  source: https://github.com/mabulgu/the-neverending-blog.git
+  source: https://github.com/who-lxp/django-scaffold.git
   source_path: chart
   sync_policy_automated: true
   destination: *test_ns
   source_ref: master
-  values: *neverending_values
+  values: *django-scaffold_values
   ignore_differences: *ignore_differences
-- name: neverending-db
+- name: django-scaffold-db
   enabled: true
   source: https://github.com/helm/charts.git
   source_path: stable/postgresql
   sync_policy_automated: true
   destination: *test_ns
   source_ref: master
-  values: *neverending_db_values
+  values: *django-scaffold_db_values
   ignore_differences: *ignore_differences
