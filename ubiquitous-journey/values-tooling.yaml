@@ -43,7 +43,7 @@ jenkins_values: &jenkins_values
     - name: SHARED_LIB_SECRET
       value: ''
     - name: GITLAB_HOST
-      value: 'gitlab.com'
+      value: 'https://gitlab.com'
     - name: GITLAB_TOKEN
       value: 'kr1RuB9R8tWCMq4Btayn'
     - name: GITLAB_GROUP_NAME
