@@ -43,11 +43,11 @@ jenkins_values: &jenkins_values
     - name: SHARED_LIB_SECRET
       value: ''
     - name: GITLAB_HOST
-      value: ''
+      value: 'gitlab.com'
     - name: GITLAB_TOKEN
-      value: ''
+      value: 'kr1RuB9R8tWCMq4Btayn'
     - name: GITLAB_GROUP_NAME
-      value: rht-labs
+      value: who-lxp
 
 ##############
 # 🛎 Pact Broker Custom Values
