@@ -68,11 +68,11 @@ applications:
   ignore_differences: *ignore_differences
 - name: django-scaffold
   enabled: true
-  source: https://github.com/who-lxp/django-scaffold.git
+  source: https://gitlab.com/who-lxp/django-scaffold.git
   source_path: chart
   sync_policy_automated: true
   destination: *test_ns
-  source_ref: master
+  source_ref: dev
   values: *django-scaffold_values
   ignore_differences: *ignore_differences
 - name: django-scaffold-db
