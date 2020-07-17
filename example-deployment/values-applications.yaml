@@ -24,8 +24,8 @@ django-scaffold: &django-scaffold_values
 
 django-scaffold-db: &django-scaffold_db_values
   securityContext:
-    runAsUser: 1000590000
-    fsGroup: 1000590000
+    runAsUser: 1000670000
+    fsGroup: 1000670000
   global:
     postgresql:
       postgresqlDatabase: neverendingblog
